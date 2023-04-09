@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+
+    <title>Carrito de Compras</title>
+</head>
+<body>
+        <!-- HEADER -->
+        <header class="pb-md-4 pb-0">
+            <div class="top_bar" style="background-color: #0ea487; padding: 5px;">
+                <div class="container">
+                    <div class="row top-bar" style="padding-bottom: 3px;">
+                        <div class="col text-left">
+                            <span class="text-white">
+                                Something you love is now on sale!&nbsp; <a class="text-white" href="#">Buy Now !</a>
+                            </span>
+                        </div>
+        
+                        <div class="col text-right">
+                            <ul class="nav justify-content-end" style="font-size: 18px;">
+                                <li class="nav-item">
+                                    <img src="../img/United States.png" alt="USD" style="height: 25px;"> 
+                                    <select class="text-white">
+                                        <option class="text-black" value="en">English</option>
+                                        <option class="text-black" value="fr">Germany</option>
+                                        <option class="text-black" value="es">Turki</option>
+                                    </select>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: #56c0ab;" href="#">|</a>
+                                </li>
+                                <li class="nav-item">
+                                    <select class="text-white">
+                                        <option class="text-black" value="en">USD</option>
+                                        <option class="text-black" value="fr">EUR</option>
+                                        <option class="text-black" value="es">CNY</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="header">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <nav class="navbar">
+                            <div class="logo">
+                              <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="search">
+                              <input type="text" placeholder="Im searching for...">
+                              <button style="background: #ffa53b;" type="submit"><img src="../assets/search.svg" alt=""></i></button>
+                            </div>
+                            <div class="buttons button-container">
+                                <button class="telephone"><img src="../assets/telephone.svg" alt=""></button>
+                                <a href="../pages/favorites.html"><button class="favorites"><img src="../assets/heart.svg" alt=""></button></a>
+                                <button onclick="location.href='../pages/shoppingCart.html'" class="cart hover-button"><img src="../assets/shoppingcart.svg" alt=""></button>
+                                <div class="content">Here is some content!</div>
+                                <button class="user"><img src="../assets/user.svg" alt=""></button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /HEADER -->
+    
+        <!-- NAVIGATION -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <button class="btn btn-lg text-white" style="background-color: #0da487;" type="button"><i class="bi bi-list"></i>&nbsp;All Categories</button>
+                <div class="right">
+                    <ul class="nav__list">
+                        <li>
+                            <select name="" id="">
+                                <option value="">Home</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Shop</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Product</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Mega Menu</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Blog</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Pages</option>
+                            </select>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+            </div>          
+        </nav>
+        <!-- /NAVIGATION -->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    
+</body>
+</html>
