@@ -139,3 +139,48 @@ a {
   margin-right: 2px; /* separación entre estrellas */
   transform: rotate(-15deg); /* rotación para crear la forma de la estrella */
 }
+
+
+
+.footer-content figure img {
+  width: 100%;
+  height: auto;
+}
+.footer-content figure {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content div {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* biutton hover delete and edit */
+.cards__buttons {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  visibility: hidden;
+}
+.card:hover .cards__button {
+  visibility: visible;
+}
+
+.cards__button {
+  border: none;
+  width: 30px;
+  color: #797d88;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cards__button:hover {
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgba(153, 163, 164, 0.7);
+  transform: scale(1.05);
+}
+
