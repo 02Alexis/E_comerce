@@ -21,13 +21,11 @@
 <body>
     <!-- HEADER -->
     <header class="pb-md-4 pb-0">
-        <div class="top_bar" style="background-color: #0ea487; padding: 5px;">
+        <div class="top_bar" style="background-color: #0ea487; padding: 10px 5px 0px;">
             <div class="container">
-                <div class="row top-bar" style="padding-bottom: 3px;">
+                <div class="row top-bar">
                     <div class="col text-left">
-                        <span class="text-white">
-                            Something you love is now on sale!&nbsp; <a class="text-white" href="#">Buy Now !</a>
-                        </span>
+                        <p class="text-white">Something you love is now on sale!&nbsp; <a class="text-white" href="#">Buy Now !</a></p>
                     </div>
     
                     <div class="col text-right">
@@ -36,8 +34,6 @@
                                 <img src="img/United States.png" alt="USD" style="height: 25px;"> 
                                 <select class="text-white">
                                     <option class="text-black" value="en">English</option>
-                                    <option class="text-black" value="fr">Germany</option>
-                                    <option class="text-black" value="es">Turki</option>
                                 </select>
                             </li>
                             <li class="nav-item">
@@ -46,8 +42,6 @@
                             <li class="nav-item">
                                 <select class="text-white">
                                     <option class="text-black" value="en">USD</option>
-                                    <option class="text-black" value="fr">EUR</option>
-                                    <option class="text-black" value="es">CNY</option>
                                 </select>
                             </li>
                         </ul>
@@ -80,51 +74,50 @@
                 </div>
             </div>
         </div>
+        <!-- NAVIGATION -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <button class="btn btn-lg text-white" style="background-color: #0da487;" type="button"><i class="bi bi-list"></i>&nbsp;All Categories</button>
+                <div class="right">
+                    <ul class="nav__list">
+                        <li>
+                            <select name="" id="">
+                                <option value="">Home</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Shop</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Product</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Mega Menu</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Blog</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">Pages</option>
+                            </select>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+            </div>          
+        </nav>
+        <!-- /NAVIGATION -->
     </header>
     <!-- /HEADER -->
-
-    <!-- NAVIGATION -->
-    <nav class="navbar bg-body-tertiary">
-        <div class="container">
-            <button class="btn btn-lg text-white" style="background-color: #0da487;" type="button"><i class="bi bi-list"></i>&nbsp;All Categories</button>
-            <div class="right">
-                <ul class="nav__list">
-                    <li>
-                        <select name="" id="">
-                            <option value="">Home</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="">
-                            <option value="">Shop</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="">
-                            <option value="">Product</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="">
-                            <option value="">Mega Menu</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="">
-                            <option value="">Blog</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="">
-                            <option value="">Pages</option>
-                        </select>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-              </div>
-        </div>          
-    </nav>
-    <!-- /NAVIGATION -->
 
     <!-- SECTION -->
     <div class="section">
@@ -139,44 +132,260 @@
     </div>
     <!-- /SECTION -->
 
+    <!-- SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="container px-4 text-center">
+                <div class="row row-cols-lg-4 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="p-3"><img src="./img/section2.PNG" alt=""></div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3"><img src="./img/section2_2.PNG" alt=""></div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3"><img src="./img/section2_3.PNG" alt=""></div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3"><img src="./img/section2_4.PNG" alt=""></div>
+                      </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SECTION -->
+
         <!-- SECTION -->
         <div class="section">
             <div class="container">
-                <div class="container px-4 text-center">
-                    <div class="row row-cols-lg-4 g-2 g-lg-3">
-                        <div class="col">
-                            <div class="p-3"><img src="./img/section2.PNG" alt=""></div>
+                <div class="row w-100">
+                    <div class="col-4 bg-light p-5 container__col--categories">
+                        <h5>Categorias</h5>
+                        <div class="w-100 d-flex">                        
+                            <hr class="bg-green w-25 separador" />
+                        </div>
+    
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/leaf.svg" alt=""> vegetables & Fruit</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/coffe.svg" alt=""> Beverages</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/coffe.svg" alt=""> Meats & Seafoods</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/coffe.svg" alt=""> Breakfast & Dairy</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/snow.svg" alt=""> Frozen Foods</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/leaf.svg" alt=""> Biscuits & Snacks</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/leaf.svg" alt=""> Grocery & Staples</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#"><img src="./assets/beer.svg" alt=""> Wines & Alcohol Drinks</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-8 container__col">
+                        <h3>Top Save Today</h3>
+                        <div class="w-100 d-flex">                        
+                          <hr class="bg-green w-25 separador" />
+                          <span><img src="./assets/leaf.svg" alt=""></span>
+                          <hr class="bg-green w-25 separador" />
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-3">
+                          <div class="card">
+                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Fantasy Crunchy Choco Chip Cookies</h5>
+                              <p class="card-text">$14.25</p>
+                              <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                              <a href="#" class="btn btn-primary">Add</a>
+                            </div>
                           </div>
-                          <div class="col">
-                            <div class="p-3"><img src="./img/section2_2.PNG" alt=""></div>
+                          <div class="card">
+                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Peanut Butter Bite Premium Butter Cookies 600 g</h5>
+                              <p class="card-text">350 G</p>
+                              <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                              <a href="#" class="btn btn-primary">Add</a>
+                            </div>
                           </div>
-                          <div class="col">
-                            <div class="p-3"><img src="./img/section2_3.PNG" alt=""></div>
+                          <div class="card">
+                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Yumitos Chilli Sprinkled Potato Chips 100 g</h5>
+                              <p class="card-text">$10.25</p>
+                              <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                              <a href="#" class="btn btn-primary">Add</a>
+                            </div>
                           </div>
-                          <div class="col">
-                            <div class="p-3"><img src="./img/section2_4.PNG" alt=""></div>
-                          </div>                  
+                          <div class="card">
+                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Cold Brew Coffee Instant Coffee 50 g</h5>
+                              <p class="card-text">$52.95</p>
+                              <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                              <a href="#" class="btn btn-primary">Add</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /SECTION -->
 
-        <!-- SECTION -->
-        <div class="section">
-            <div class="container">
-            </div>
-        </div>
-        <!-- /SECTION -->
-
         <!-- FOOTER -->
-        <footer id="footer">
+        <footer class="footer">
             <!-- top footer -->
             <div class="section">
-                <div class="container">
+                <div class="container py-5">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                      <div class="col-6 logo">
+                        <img src="./img/logo.png" alt="Logo">
+                        <p class="mb-0">We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a perfect place for a couple.</p>
+                        <br>
+                        <ul>
+                          <li>1418 Riverwood Drive, CA 96052, US</li>
+                          <li>support@fastkart.com</li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h5>Categorías</h5>
+                        <ul>
+                          <li><a href="#">Vegetables & Fruit</a></li>
+                          <li><a href="#">Beverages</a></li>
+                          <li><a href="#">Meats & Seafood</a></li>
+                          <li><a href="#">Frozen Foods</a></li>
+                          <li><a href="#">Biscuits & Snacks</a></li>
+                          <li><a href="#">Grocery & Staples</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h5>Enlaces útiles</h5>
+                        <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Shop</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h5>Centro de ayuda</h5>
+                        <ul>
+                          <li><a href="#">Cómo comprar</a></li>
+                          <li><a href="#">Envíos y entregas</a></li>
+                          <li><a href="#">Pagos y facturación</a></li>
+                          <li><a href="#">Devoluciones y cambios</a></li>
+                          <li><a href="#">Garantías y reparaciones</a></li>
+                          <li><a href="#">Contacto</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h5>Contacto</h5>
+                        <ul>
+                          <li>Dirección: Av. Principal #123</li>
+                          <li>Teléfono: +1234567890</li>
+                          <li>Email: info@empresa.com</li>
+                        </ul>
+                      </div>
+                    </div>
                 </div>
             </div>
             <!-- /top footer -->
+            <!-- <div class="section">
+                <img src="./img/logo.png" alt="Logo">
+                <p>
+                  <p>We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a perfect place for a couple.</p><br>
+                  <ul>
+                    <li>1418 Riverwood Drive, CA 96052, US</li>
+                    <li>support@fastkart.com</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="section">
+                <h3>Categories</h3>
+                <ul>
+                  <li><a href="#">Categoría 1</a></li>
+                  <li><a href="#">Categoría 2</a></li>
+                  <li><a href="#">Categoría 3</a></li>
+                  <li><a href="#">Categoría 4</a></li>
+                  <li><a href="#">Categoría 5</a></li>
+                  <li><a href="#">Categoría 6</a></li>
+                </ul>
+              </div>
+              <div class="section">
+                <h3>Useful Links</h3>
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">shop</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="section">
+                <h3>Help Center</h3>
+                <ul>
+                  <li><a href="#">Your Order</a></li>
+                  <li><a href="#">Your Account</a></li>
+                  <li><a href="#">Track Order</a></li>
+                  <li><a href="#">Your Wishlist</a></li>
+                  <li><a href="#">Search</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="section">
+                <h3>Contacto</h3>
+                <ul>
+                  <li>Dirección: Calle Falsa 123, Ciudad Ficticia</li>
+                  <li>Teléfono: 123-456-7890</li>
+                  <li>Email: info@empresa.com</li>
+                </ul>
+              </div> -->
 
             <!-- bottom footer -->
             <div class="section" id="bottom-footer">
