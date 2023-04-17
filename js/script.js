@@ -1,68 +1,68 @@
-const URL_PRODUCTS= "http://localhost:3000/products";
+// ----------------- variables and constants
+let Products = [];
+const http = "http://localhost:3000/products";
+const productContainer = document.getElementById('productContainer')
 
-let arrayProducs = [];
-
-const getAllProducts = async () => {
-    //METODO GET
-    const response = await fetch(URL_PRODUCTS);
-    const data = await response.json();
-    arrayProducs = data;
-   // filtrar por categoria:
-
-} 
-
-const filterByCategory = async (categoria) => {
-   await getAllProducts();
-   const filteredProduct = arrayProducs.filter(item => item.category.includes(categoria))
-   console.log("array filtrado", filteredProduct);
-}
-
-filterByCategory('milk')
-
-//getAllProducts();
-
-const getPostById = async (id) => {
-   //METODO GET
-   const response = await fetch(`${URL}/${id}`);
-   const data = await response.json();
-   console.log("datos del get post by ID", data);
-}
-
-//getPostById(2);
-
-
-const createPost = async (post) => {
-   // POST
-   const product = {
-    "imgProduct": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/1.png",
-    "nameProduct": "Choco Chip Cookies",
-    "grams":"550 G",
-    "price": "$14.25",
-    "category": [
-        "snack",
-        "biscuits"
-    ]
+// ----------------- functions
+const getInfoProduct = async() => {//get the products from the api
+   try {
+      // const Products = [];
+      const { data } = await axios.get(http)
+      // console.log(data);
+      return data;
+      
+   } catch (error) {
+      console.error(error);
+      return [];
    }
-   const opciones = {
-      method: "POST",
-      headers: {
-         "Content-Type": "application/json"
-      },
-      body: JSON.stringify(product)
-   }
-   const response = await fetch(URL_PRODUCTS, opciones);
-   const data = await response.json();
-
-   console.log("datos del POST post", data);
-   getAllProducts();
 }
 
-// createPost();
+const showProductCategory = (container, productsList) => {
+   container.innerHTML = "";
 
-const updatePost = (post) => {
-   // PUT
+   productsList.forEach((Product) => {
+      container.innerHTML += `
+      <div class="card">
+      <figure class="cards__figure">
+                <img class="cards__image" src=${Product.imgProduct} class="card-img-top" alt=${Product.nameProduct}>
+             </figure>
+             <div class="card__buttons">
+                <button class="cards__button cards__button--delete">
+                   <span class="material-symbols-outlined">
+                   visibility
+                   </span>
+                </button>
+                <button class="cards__button cards__button--delete">
+                   <span class="material-symbols-outlined">
+                   autorenew
+                   </span>
+                </button>
+                <button class="cards__button cards__button--edit">
+                   <span class="material-symbols-outlined">
+                   favorite
+                   </span>
+                </button>
+             </div>
+             <div class="card-body">
+                <h5 class="card-title">${Product.nameProduct}</h5>
+                <p class="card-text">${Product.price}</p>
+                <div class="rating">
+                   <span class="star">&#9733;</span>
+                   <span class="star">&#9733;</span>
+                   <span class="star">&#9733;</span>
+                   <span class="star">&#9733;</span>
+                   <span class="star">&#9733;</span>
+                </div>
+                <a href="#" class="btn btn-primary">Add</a>
+             </div>
+             </div> 
+      `
+   });
 }
 
-const updatePost2 = (post) => {
-   // PATCH
-}
+// ----------------- Execution
+document.addEventListener("DOMContentLoaded", async () => {
+   Products = await getInfoProduct();
+   console.log(Products);
+   showProductCategory(productContainer, Products)
+})

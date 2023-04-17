@@ -159,13 +159,14 @@ a {
 }
 
 /* biutton hover delete and edit */
-.cards__buttons {
+.card__buttons {
   position: absolute;
-  top: 65%;
+  top: 35%;
   left: 30%;
   visibility: hidden;
+  border: none;
 }
-.card:hover .cards__button {
+.card:hover .card__buttons {
   visibility: visible;
 }
 
@@ -184,3 +185,7 @@ a {
   transform: scale(1.05);
 }
 
+.cards__figure{
+  width: 100px;
+  height: 100px;
+}
