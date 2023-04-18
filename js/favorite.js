@@ -1,0 +1,1 @@
+export const httpFavorite = "http://localhost:3000/favorites"
