@@ -18,7 +18,16 @@ const getInfoProduct = async() => {//get the products from the api
    }
 }
 
-const postProduct = async(endpoint, product) => {
+const postProduct = async(endpoint, product) => {//save the product in favorite
+   try {
+      const result = await axios.post(`http://localhost:3000/${endpoint}`,product)
+      console.log(result);
+   } catch (error) {
+      console.log(error);
+   }
+}
+
+const postShoppingCar = async(endpoint, product) => {//save the product in shoppingCar
    try {
       const result = await axios.post(`http://localhost:3000/${endpoint}`,product)
       console.log(result);
@@ -63,7 +72,7 @@ const showProductCategory = (container, productsList) => {
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
                </div>
-               <a href="#" class="btn btn-primary">Add</a>
+               <button class="btn btn-primary" data-btn='bShoppingCart' data-id=${Product.id}>Add</button>
             </div>
       </div> 
       `
@@ -77,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
    showProductCategory(productContainer, Products)
 })
 
-//agregar el evento click para enviar a la visat detalles
+//add click event to send to details view
 document.addEventListener("click", (event) => {
    const dataCardAttribute = event.target.getAttribute("data-card");
    if (dataCardAttribute === "cards") {
@@ -86,8 +95,8 @@ document.addEventListener("click", (event) => {
       window.location.href = "./pages/details.html";
    }
 });
-// Agregar evento de clic para guardar en favoritos
 
+// Add click event to save to favorites
 document.addEventListener('click', async(event) => {
    const productId = event.target.getAttribute("data-id")
    const bFavorite = event.target.getAttribute("data-button")
@@ -98,4 +107,15 @@ document.addEventListener('click', async(event) => {
       swal('¡Producto agregado!', 'El producto se ha agregado a la lista de favoritos', 'success');
    }
 });
-// productContainer.appendChild(productElement);
+
+// Add click event to save to shoppingCart
+document.addEventListener('click', async(event) => {
+   const shoppingId = event.target.getAttribute("data-id")
+   const bShoppingCart = event.target.getAttribute("data-btn")
+   if (bShoppingCart) {
+      const product = Products.find(prod => prod.id == shoppingId)
+      await postShoppingCar("shoppingCart",product)
+      // Mostrar notificación de SweetAlert
+      swal('¡Producto agregado!', 'El producto se ha agregado al carrito de compras', 'success');
+   }
+});
