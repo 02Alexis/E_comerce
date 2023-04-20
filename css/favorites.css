@@ -197,3 +197,122 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+/* 
+.card-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-prices {
+  margin-top: 10px;
+}
+
+.card-price-original {
+  font-size: 20px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.card-price-discount {
+  font-size: 16px;
+  color: #666;
+  text-decoration: line-through;
+  margin-right: 10px;
+} */
+.card-container {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-image-container {
+  width: 100%;
+  max-height: 0;
+  padding-top: 60%; /* Establecer el tamaño relativo del contenedor de la imagen */
+  position: relative;
+}
+
+.card-image {
+  width: 50%;
+  height: 100%; /* Establecer el tamaño de la imagen al 100% del contenedor */
+  object-fit: cover; /* Ajustar la imagen al contenedor manteniendo la proporción */
+  border-radius: 5px 5px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Centrar la imagen vertical y horizontalmente */
+}
+
+.card-content {
+  padding: 20px;
+  color: #797d88;
+}
+
+.card-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-description {
+  color: #000;
+  max-width: 100%;
+}
+
+.card-prices {
+  margin-top: 10px;
+}
+
+.card-price-original {
+  font-size: 20px;
+  color: #0ea487;
+  font-weight: bold;
+}
+
+.card-price-discount {
+  font-size: 16px;
+  color: #797d88;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #0ea487;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-button i {
+  margin-right: 5px;
+}

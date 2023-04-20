@@ -22,20 +22,19 @@ const showProductFavorite = (container, productsList) => {
 
    productsList.forEach((Product) => {
       container.innerHTML += `
-      <div class="col-12 col-md-12 col-lg-4">
-         <div class="card text-certer bg-white pb-2">
-            <div class="card-body text-dark">
-               <div class="img-area mb-4">
-                  <img class="img-fluid" src=${Product.imgProduct} alt=${Product.nameProduct}>
-               </div>
-               <h3 class="card-title">${Product.category}</h3>
-               <p class="lead">${Product.nameProduct}</p>
-               <p class="leadt">${Product.grams}</p>
-               <p class="leadt">${Product.price}</p>
-               
-                  <button class="btn btn-primary" data-btn='bShoppingCart' data-id=${Product.id}>Add</button>
-               
-            </div> 
+      <div>
+         <div class="card-image-container">
+            <img class="card-image" src=${Product.imgProduct} alt=${Product.nameProduct}>
+         </div>
+         <div class="card-content">
+            <h2 class="card-name">${Product.category}</h2>
+            <p class="card-description"">${Product.nameProduct}</p>
+            <p class="card-name"">${Product.grams}</p>
+            <div class="card-prices">
+               <span class="card-price-original">${Product.price}</span>
+               <span class="card-price-discount">${Product.price} </span>
+            </div>
+            <button class="card-button" data-btn='bShoppingCart' data-id=${Product.id}>Add <i class="fas fa-plus"></i></button>
          </div>
       </div>
       `
