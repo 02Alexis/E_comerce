@@ -1,6 +1,6 @@
 // ----------------- variables and constants
 let Products = [];
-const http = "http://localhost:3000/products?_limit=6";
+const http = "http://localhost:3000/products";
 const productContainer = document.getElementById('productContainer')
 
 // ----------------- functions
@@ -113,10 +113,7 @@ document.addEventListener('click', async(event) => {
       // Mostrar notificación de SweetAlert
       swal('¡Producto agregado!', 'El producto se ha agregado a la lista de favoritos', 'success');
       return true;
-   } else {
-      Swal.fire("Oops!", `ya se encuentra en la lista`, "error");
-      return false;
-    }
+   }
 });
 
 // Add click event to save to shoppingCart
@@ -130,3 +127,22 @@ document.addEventListener('click', async(event) => {
       swal('¡Producto agregado!', 'El producto se ha agregado al carrito de compras', 'success');
    }
 });
+
+//-----------------------Filtrado---------------------
+const categories = ["vegetable"];
+
+Products.forEach((item) => {
+   if (!categories.includes(item.category)) {
+      categories.push(item.category);
+   }
+});
+categories.forEach((item) => {
+   const botonFiltrado = document.getElementsByName(item)[0];
+   botonFiltrado.addEventListener("click", () => {
+      const productFilter =
+        item === "vegetable"
+          ? Products
+          : Products.filter((element) => element.category === item);
+          showProductCategory(productContainer, productFilter)
+   });
+})
