@@ -131,18 +131,23 @@ document.addEventListener('click', async(event) => {
 //-----------------------Filtrado---------------------
 const categories = ["vegetable"];
 
-Products.forEach((item) => {
-   if (!categories.includes(item.category)) {
-      categories.push(item.category);
-   }
-});
-categories.forEach((item) => {
-   const botonFiltrado = document.getElementsByName(item)[0];
-   botonFiltrado.addEventListener("click", () => {
-      const productFilter =
-        item === "vegetable"
-          ? Products
-          : Products.filter((element) => element.category === item);
-          showProductCategory(productContainer, productFilter)
+// Products.forEach((item) => {
+//    if (!categories.includes(item.category)) {
+//       categories.push(item.category);
+//    }
+// });
+   
+   document.addEventListener("click", (event) => {
+      
+      if (event.target.classList.contains("filterButton")){
+         const filter = event.target.name;
+         const filterProducts = Products.filter(item => {
+            return item.category.includes(filter)
+         })
+         showProductCategory(productContainer, filterProducts)
+      }
+      // const productFilter =
+      //   item === "vegetable"
+      //     ? Products
+      //     : Products.filter((element) => element.category === item);
    });
-})
