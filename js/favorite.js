@@ -5,17 +5,26 @@ const favoritesContainer = document.getElementById('favoritesContainer')
 
 // ----------------- functions
 const getFavoriteProduct = async() => {//get the products from the api
-    try {
-       // const Products = [];
-       const { data } = await axios.get(httpFavorite)
-      //  console.log(data);
-       return data;
-       
-    } catch (error) {
-       console.error(error);
-       return [];
-    }
- }
+   try {
+      // const Products = [];
+      const { data } = await axios.get(httpFavorite)
+   //  console.log(data);
+      return data;
+      
+   } catch (error) {
+      console.error(error);
+      return [];
+   }
+}
+
+const deleteFavorite = async(endpoint, product) => {//save the product in shoppingCar
+   try {
+      const result = await axios.delete(`http://localhost:3000/${endpoint}`,product)
+      console.log(result);
+   } catch (error) {
+      console.log(error);
+   }
+}
 
 const showProductFavorite = (container, productsList) => {
    container.innerHTML = "";
@@ -25,6 +34,7 @@ const showProductFavorite = (container, productsList) => {
       <div>
          <div class="card-image-container">
             <img class="card-image" src=${Product.imgProduct} alt=${Product.nameProduct}>
+            <button class="delete-btn" data-card='delete' name=${Product.id}><img src="../assets/delete.svg"></button>
          </div>
          <div class="card-content">
             <h2 class="card-name">${Product.category}</h2>
@@ -41,8 +51,19 @@ const showProductFavorite = (container, productsList) => {
    });
 }
 
- document.addEventListener("DOMContentLoaded", async () => {
-    productsF = await getFavoriteProduct();
-    console.log(productsF);
-    showProductFavorite(favoritesContainer, productsF)
- })
+document.addEventListener("DOMContentLoaded", async () => {
+   productsF = await getFavoriteProduct();
+   console.log(productsF);
+   showProductFavorite(favoritesContainer, productsF)
+})
+
+document.addEventListener("click", (event) => {
+   const dataCardAttribute = event.target.getAttribute("data-card");
+   const id = Number(event.target.getAttribute("name"));
+   if (dataCardAttribute === "delete") {
+      console.log("Quiero eliminar este producto, no se me apetece compralo");
+      productsF = productsF.filter((item) => item.id !== id);
+      showProductFavorite(favoritesContainer, productsF)
+      
+   }
+})
