@@ -41,39 +41,47 @@ const showProductCategory = (container, productsList) => {
    productsList.forEach((Product) => {
       container.innerHTML += `
       <div class="card">
-         <figure class="cards__figure">
-            <img class="cards__image card-img-top" src=${Product.imgProduct} alt=${Product.nameProduct}>
-         </figure>
-         <div class="card__buttons">
-            <button class="cards__button cards__button--see">
-               <span data-card='cards' name=${Product.nameProduct} class="material-symbols-outlined">
-               visibility
-               </span>
-            </button>
-            <button class="cards__button cards__button--autorenew">
-               <span class="material-symbols-outlined">
-               autorenew
-               </span>
-            </button>
-            <button class="cards__button cards__button--favorite">
-               <span data-button='bFavorite' data-id=${Product.id} class="material-symbols-outlined">
-               favorite
-               </span>
-            </button>
+         <div class="card-image-container">
+            <img class="card-image" src=${Product.imgProduct} alt=${Product.nameProduct}>
+         </div>
+            <div class="card__buttons">
+               <button class="cards__button cards__button--see">
+                  <span data-card='cards' name=${Product.nameProduct} class="material-symbols-outlined">
+                  visibility
+                  </span>
+               </button>
+               <button class="cards__button cards__button--autorenew">
+                  <span class="material-symbols-outlined">
+                  autorenew
+                  </span>
+               </button>
+               <button class="cards__button cards__button--favorite">
+                  <span data-button='bFavorite' data-id=${Product.id} class="material-symbols-outlined">
+                  favorite
+                  </span>
+               </button>
             </div>
-            <div class="card-body">
-               <h5 class="card-title">${Product.nameProduct}</h5>
-               <p class="card-text">${Product.price}</p>
+            <div class="card-content">
+               <p class="card-description">${Product.nameProduct}</p>
+               <div class="card-prices">
+                  <span class="card-price-original">${Product.price}</span>
+                  <span class="card-price-discount">${Product.price} </span>
+               </div>
                <div class="rating">
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
+                  <span class="card-price-original">In Shock</span>
                </div>
-               <button class="btn btn-primary" data-btn='bShoppingCart' data-id=${Product.id}>Add</button>
+               <button class="card-button" data-btn='bShoppingCart' data-id=${Product.id}>
+                  <span class="btn-text">Add</span>
+                  <span class="btn-icon"><i class="fas fa-plus"></i></span>
+               </button>
             </div>
-      </div> 
+         </div> 
+      </div>
       `
    });
 }

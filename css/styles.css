@@ -123,7 +123,7 @@ a {
 
 /* calificacion de 5 estrellas */
 .rating {
-  font-size: 24px;
+  font-size: 20px;
   display: inline-block;
   color: #ffd700; /* color de las estrellas */
 }
@@ -131,7 +131,6 @@ a {
 .star {
   font-size: inherit;
   display: inline-block;
-  margin-right: 2px; /* separación entre estrellas */
   transform: rotate(-15deg); /* rotación para crear la forma de la estrella */
 }
 
@@ -161,7 +160,7 @@ a {
   box-shadow: 0px 0px 10px rgba(153, 163, 164, 0.7);
   transform: scale(1.05);
 }
-/* div products */
+/* list category product*/
 .separador {
   border: 2px solid;
   color: #0e856f;
@@ -175,20 +174,95 @@ a {
   gap: 50px;
   margin-bottom: 20px;
 } 
-/* card json */
-.section-content .cards__figure .cards__image {
+
+/* products */
+.card-container {
   width: 100%;
-  height: 100%;
-  cursor: pointer;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
 }
-.section-content .cards__figure {
-  padding: 15px;
-  border-radius: 10px;
-  margin: 10px;
+
+.card-image-container {
+  width: 100%;
+  max-height: 0;
+  margin-bottom: 20px;
+  padding-top: 60%; /* Establecer el tamaño relativo del contenedor de la imagen */
+  position: relative;
+}
+
+.card-image {
+  width: 50%;
+  height: 100%; /* Establecer el tamaño de la imagen al 100% del contenedor */
+  object-fit: cover; /* Ajustar la imagen al contenedor manteniendo la proporción */
+  border-radius: 5px 5px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Centrar la imagen vertical y horizontalmente */
+}
+
+.card-content {
+  color: #797d88;
+}
+
+.card-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-description {
+  color: #000;
+  max-width: 100%;
+}
+
+.card-prices {
+  margin-top: 10px;
+}
+
+.card-price-original {
+  font-size: 18px;
+  color: #0ea487;
+  font-weight: bold;
+}
+
+.card-price-discount {
+  font-size: 16px;
+  color: #797d88;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.card-button {
+  display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 15px;
+  color: #666769;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.section-content .card {
-  justify-content: space-between;
-  flex-wrap: wrap;
+.btn-text {
+  margin-right: 10px;
+  margin-left: 70px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
+}
+.card-button i {
+  color: #0ea487;
+  font-size: 15px;
 }
