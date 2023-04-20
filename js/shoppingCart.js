@@ -1,3 +1,27 @@
+// ----------------- variables and constants
+let productsSC = [];
+const httpShoppingCart = "http://localhost:3000/shoppingCart";
+const shoppingCartContainer = document.getElementById('shoppingCartContainer')
+
+// ----------------- functions
+const getShoppingCartProduct = async() => {//get the products from the api
+    try {
+        // const Products = [];
+        const { data } = await axios.get(httpShoppingCart)
+        // console.log(data);
+        return data;
+        
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    productsSC = await getShoppingCartProduct();
+    console.log(productsSC);
+})
+
 // Variables
 const baseDeDatos = [
     {

@@ -120,3 +120,8 @@ a {
   color: #333;
   font-size: 16px;
 }
+
+.main .main__nav{
+  display: flex;
+  justify-content: space-between;
+}
