@@ -1,8 +1,7 @@
 // ----------------- variables and constants
 let Products = [];
-const http = "http://localhost:3000/products";
+const http = "http://localhost:3000/products?_limit=6";
 const productContainer = document.getElementById('productContainer')
-const favoritesContainer = document.getElementById('favoritesContainer')
 
 // ----------------- functions
 const getInfoProduct = async() => {//get the products from the api
@@ -82,7 +81,7 @@ const showProductCategory = (container, productsList) => {
 // ----------------- Execution
 document.addEventListener("DOMContentLoaded", async () => {
    Products = await getInfoProduct();
-   console.log(Products);
+   console.log("hoola", Products);
    showProductCategory(productContainer, Products)
 })
 
@@ -105,7 +104,11 @@ document.addEventListener('click', async(event) => {
       await postProduct("favorites",product)
       // Mostrar notificación de SweetAlert
       swal('¡Producto agregado!', 'El producto se ha agregado a la lista de favoritos', 'success');
-   }
+      return true;
+   } else {
+      Swal.fire("Oops!", `ya se encuentra en la lista`, "error");
+      return false;
+    }
 });
 
 // Add click event to save to shoppingCart
