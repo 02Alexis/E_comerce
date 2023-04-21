@@ -17,6 +17,17 @@ const getInfoProduct = async() => {//get the products from the api
    }
 }
 
+const getProduct = async(endpoint) => {//save the product in favorite
+   try {
+      const result = await axios.get(`http://localhost:3000/${endpoint}`)
+      console.log(result);
+      return result.data;
+   } catch (error) {
+      console.log(error);
+      return [];
+   }
+}
+
 const postProduct = async(endpoint, product) => {//save the product in favorite
    try {
       const result = await axios.post(`http://localhost:3000/${endpoint}`,product)
@@ -103,16 +114,22 @@ document.addEventListener("click", (event) => {
    }
 });
 
+
+
 // Add click event to save to favorites
 document.addEventListener('click', async(event) => {
    const productId = event.target.getAttribute("data-id")
    const bFavorite = event.target.getAttribute("data-button")
    if (bFavorite) {
       const product = Products.find(prod => prod.id == productId)
-      await postProduct("favorites",product)
-      // Mostrar notificación de SweetAlert
-      swal('¡Producto agregado!', 'El producto se ha agregado a la lista de favoritos', 'success');
-      return true;
+      const favorites = await getProduct("favorites")
+      if (favorites.find(prod => prod.id == productId)) {
+         swal('¡ya se encuentra en favoritos!', 'Tu producto ya se encuentra en tu lista de deseos', 'info');
+      } else {
+         await postProduct("favorites",product)
+         // Mostrar notificación de SweetAlert
+         swal('¡Producto agregado!', 'El producto se ha agregado a la lista de favoritos', 'success');
+      }      
    }
 });
 
