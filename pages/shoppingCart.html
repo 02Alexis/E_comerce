@@ -24,105 +24,100 @@
     <title>Carrito de Compras</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="pb-md-4 pb-0">
-        <div class="top_bar" style="background-color: #0ea487; padding: 10px 5px 0px;">
-            <div class="container">
-                <div class="row top-bar">
-                    <div class="col text-left">
-                        <p class="text-white">Something you love is now on sale!&nbsp; <a class="text-white" href="#">Buy Now !</a></p>
-                    </div>
-    
-                    <div class="col text-right">
-                        <ul class="nav justify-content-end" style="font-size: 18px;">
-                            <li class="nav-item">
-                                <img src="../img/United States.png" alt="USD" style="height: 25px;"> 
-                                <select class="text-white">
-                                    <option class="text-black" value="en">English</option>
-                                </select>
-                            </li>
-                            <li class="nav-item">
-                                <a style="color: #56c0ab;" href="#">|</a>
-                            </li>
-                            <li class="nav-item">
-                                <select class="text-white">
-                                    <option class="text-black" value="en">USD</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+ <!-- HEADER -->
+ <header class="pb-md-4 pb-0">
+    <div class="top_bar" style="background-color: #0ea487; padding: 10px 5px 0px;">
+      <div class="container">
+        <div class="row top-bar">
+          <div class="col text-left">
+            <p class="text-white">Something you love is now on sale!&nbsp; <a class="text-white" href="#">Buy Now !</a></p>
+          </div>
+          <div class="col text-right">
+            <ul class="nav justify-content-end" style="font-size: 18px;">
+              <li class="nav-item">
+                <img src="../img/United States.png" alt="USD" style="height: 25px;"> 
+                <select class="text-white">
+                  <option class="text-black" value="en">English</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <a style="color: #56c0ab;" href="#">|</a>
+              </li>
+              <li class="nav-item">
+                <select class="text-white">
+                  <option class="text-black" value="en">USD</option>
+                </select>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div id="header">
-            <!-- container -->
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <nav class="navbar">
-                        <div class="logo">
-                          <img style="cursor: pointer;" onclick="location.href='../index.html'"  src="../img/logo.png" alt="Logo">
-                        </div>
-                        <div class="search">
-                          <input type="text" placeholder="Im searching for...">
-                          <button style="background: #ffa53b;" type="submit"><img src="../assets/search.svg" alt=""></i></button>
-                        </div>
-                        <div class="buttons button-container">
-                            <button class="telephone"><img src="../assets/telephone.svg" alt=""></button>
-                            <a href="../pages/favorites.html"><button class="favorites"><img src="../assets/heart.svg" alt=""></button></a>
-                            <button onclick="location.href='../pages/shoppingCart.html'" class="cart hover-button"><img src="../assets/shoppingcart.svg" alt=""></button>
-                            <div class="content">Here is some content!</div>
-                            <button class="user"><img src="../assets/user.svg" alt=""></button>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- NAVIGATION -->
-        <nav class="navbar bg-body-tertiary">
-            <div class="container">
-                <button class="btn btn-lg text-white" style="background-color: #0da487;" type="button"><i class="bi bi-list"></i>&nbsp;All Categories</button>
-                <div class="right">
-                    <ul class="nav__list">
-                        <li>
-                            <select name="" id="">
-                                <option value="">Home</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name="" id="">
-                                <option value="">Shop</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name="" id="">
-                                <option value="">Product</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name="" id="">
-                                <option value="">Mega Menu</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name="" id="">
-                                <option value="">Blog</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name="" id="">
-                                <option value="">Pages</option>
-                            </select>
-                        </li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                  </div>
-            </div>          
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar">
+          <div class="logo">
+            <img onclick="location.href='../index.html'" src="../img/logo.png" alt="Logo">
+          </div>
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Im searching for...">
+            <button class="search-button">
+                <span class="search-icon"><img src="../assets/search.svg" alt=""></span> <!-- Icono de lupa -->
+            </button>
+          </div>
+          <div class="buttons button-container">
+            <a href="#"><img src="../assets/telephone.svg" alt=""></a><span class="navbar-separator"></span>
+            <a href="../pages/favorites.html"><img src="../assets/heart.svg" alt=""></a><span class="navbar-separator"></span>
+            <button onclick="location.href='../pages/shoppingCart.html'"><img src="../assets/shoppingcart.svg" alt=""></button><span class="navbar-separator"></span>
+            <a href="#"><img src="../assets/user.svg" alt=""></a>
+          </div>
         </nav>
-        <!-- /NAVIGATION -->
-    </header>
-    <!-- /HEADER -->
+      </div>
+    </div>
+    <!-- NAVIGATION -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <button class="btn btn-lg text-white" style="background-color: #0da487;" type="button"><i class="bi bi-list"></i>&nbsp;All Categories</button>
+        <div class="right">
+          <ul class="nav__list">
+            <li>
+              <select name="" id="">
+                  <option value="">Home</option>
+              </select>
+            </li>
+            <li>
+              <select name="" id="">
+                  <option value="">Shop</option>
+              </select>
+            </li>
+            <li>
+              <select name="" id="">
+                  <option value="">Product</option>
+              </select>
+            </li>
+            <li>
+              <select name="" id="">
+                  <option value="">Mega Menu</option>
+              </select>
+            </li>
+            <li>
+              <select name="" id="">
+                  <option value="">Blog</option>
+              </select>
+            </li>
+            <li>
+              <select name="" id="">
+                  <option value="">Pages</option>
+              </select>
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>          
+    </nav>
+    <!-- /NAVIGATION -->
+  </header>
+  <!-- /HEADER -->
     <main class="main">
         <div class="container">
             <div class="main__nav">

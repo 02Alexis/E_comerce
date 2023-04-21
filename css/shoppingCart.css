@@ -32,69 +32,56 @@ ul {
 .logo img {
   height: 50px;
   width: auto;
+  cursor: pointer;
 }
 
-.search {
+/* search */
+.search-container {
   display: flex;
   align-items: center;
-  background-color: #f2f2f2;
-  padding: 6px 8px;
+  max-width: 400px;
 }
-
-.search input[type="text"] {
-  font-family: sans-serif;
+.search-input {
+  flex: 1;
+  padding: 10px;
   border: none;
-  background-color: transparent;
-  padding: 4px;
-  font-size: 16px;
-  width: 200px;
+  border-radius: 5px 0 0 5px;
 }
-
-.search button[type="submit"] {
-  background-color: transparent;
+.search-button {
+  padding: 10px;
+  background-color: #ff9800; /* Color naranja del botón */
   border: none;
-  color: #aaa;
-  font-size: 20px;
-  margin-left: 8px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
-
+/* icons phone, favorite, shoppingcar, user */
+.buttons{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons a{
+  padding: 10px;
+}
+.buttons img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
 .buttons button {
   background-color: transparent;
   border: none;
   font-size: 20px;
   margin-left: 8px;
 }
-
-/* hover boton carrito de compras */
-.button-container {
-  position: relative;
-}
-
-.hover-button {
-  background-color: #2ecc71;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f1c40f;
-  color: white;
-  padding: 12px;
-  display: none;
-  border-radius: 5px;
-}
-
-.hover-button:hover + .content {
-  display: block;
-}
-
+.navbar-separator {
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+  margin: 0 10px;
+} 
+/* end */
 
 .right {
   flex-grow: 1;

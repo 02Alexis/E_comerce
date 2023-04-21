@@ -34,7 +34,7 @@ const showProductFavorite = (container, productsList) => {
       <div>
          <div class="card-image-container">
             <img class="card-image" src=${Product.imgProduct} alt=${Product.nameProduct}>
-            <button><img class="delete-btn" data-card='delete' name=${Product.id} src="../assets/delete.svg"></button>
+         <button><img class="delete-btn" data-card='delete' name=${Product.id} src="../assets/delete.svg"></button>
          </div>
          <div class="card-content">
             <h2 class="card-name">${Product.category}</h2>
@@ -61,7 +61,7 @@ document.addEventListener("click", (event) => {
    const dataCardAttribute = event.target.getAttribute("data-card");
    const id = Number(event.target.getAttribute("name"));
    if (dataCardAttribute == "delete") {
-      console.log("Quiero eliminar este producto, no se me apetece compralo");
+      console.log("Producto eliminado");
       productsF = productsF.filter((item) => item.id !== id);
       showProductFavorite(favoritesContainer, productsF)
       

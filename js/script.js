@@ -84,7 +84,7 @@ const showProductCategory = (container, productsList) => {
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
-                  <span class="card-price-original">In Shock</span>
+                  <span class="card-price-original">In Stock</span>
                </div>
                <button class="card-button" data-btn='bShoppingCart' data-id=${Product.id}>
                   <span class="btn-text">Add</span>
@@ -158,6 +158,7 @@ const categories = ["vegetable"];
       
       if (event.target.classList.contains("filterButton")){
          const filter = event.target.name;
+         console.log(filter);
          const filterProducts = Products.filter(item => {
             return item.category.includes(filter)
          })
