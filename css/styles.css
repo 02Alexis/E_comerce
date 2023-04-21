@@ -19,7 +19,6 @@ ul {
   margin-bottom: 0;
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -193,8 +192,8 @@ a {
 }
 
 .card-image {
-  width: 50%;
-  height: 100%; /* Establecer el tamaño de la imagen al 100% del contenedor */
+  width: 40%;
+  height: 80px; /* Establecer el tamaño de la imagen al 100% del contenedor */
   object-fit: cover; /* Ajustar la imagen al contenedor manteniendo la proporción */
   border-radius: 5px 5px 0 0;
   position: absolute;
