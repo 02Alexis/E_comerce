@@ -172,7 +172,57 @@ a {
   color: #0e856f; 
   text-decoration: underline; 
 }
+
+.main__derecha{
+  display: flex;
+  gap: 20px;
+}
+
+#contenedor {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rojo {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#etiqueta {
+  flex: 1;
+  font-size: 13px;
+}
+
+
+#cronometro {
+  display: flex;
+  justify-content: center;
+}
+
+.contador {
+  flex: 1;
+  font-size: 14px;
+}
+
+.separadorC {
+  flex: none;
+  font-size: 14px;
+}
+
+
 /* products */
+.card{
+  opacity: 0; /* Establecer la opacidad inicial en 0 */
+  animation-name: fadeIn; /* Nombre de la animación */
+  animation-duration: 0.5s; /* Duración de la animación en segundos */
+  animation-timing-function: ease-in; /* Función de temporización de la animación */
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
 .card-container {
   width: 100%;
   max-width: 300px;
@@ -264,4 +314,15 @@ a {
   background-color: #fff;
   padding: 5px 5px;
   border-radius: 50px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Animación de desplazamiento hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Animación de desplazamiento hacia arriba */
+  }
 }

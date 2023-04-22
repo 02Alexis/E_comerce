@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
 
 body{
+    background-image: url("https://themes.pixelstrap.com/fastkart/assets/images/vegetable/banner/1.jpg");
+    background-size: cover;
     font-family: 'Public Sans', sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .main{
     width: 50vw;
     height: 50vh;

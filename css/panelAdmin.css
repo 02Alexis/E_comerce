@@ -1,11 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
+
 body{
-    background-image: url("https://themes.pixelstrap.com/fastkart/assets/images/vegetable/banner/3.jpg");
+    background-image: url("https://themes.pixelstrap.com/fastkart/assets/images/vegetable/banner/1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Public Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 15px;
+}
+
+.main .main__banner{
+    height: 45%;
+    background-image: url("https://themes.pixelstrap.com/fastkart/assets/images/vegetable/banner/2.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+}
+.main .main__banner h1{
+    color: #000;
+}
+.main .main__form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    gap: 10px;
+}
+.main .main__form div{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 15px;
+}
+.main .main__form input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+.main .main__form input::placeholder{
+  font-size: 14px;
+}
+.main .main__form label{
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+}
+.main .main__form button{
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.main .main__form button:hover{
+    background-color: #fff;
+    color: blue;
+    border: 2px solid blue;
 }
