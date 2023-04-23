@@ -112,6 +112,26 @@ a {
   display: flex;
   justify-content: space-between;
 }
+/* print products */
+.card-animatiom{
+  opacity: 0; /* Establecer la opacidad inicial en 0 */
+  animation-name: fadeIn; /* Nombre de la animación */
+  animation-duration: 0.5s; /* Duración de la animación en segundos */
+  animation-timing-function: ease-in; /* Función de temporización de la animación */
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+.card-price-original {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-price-discount {
+  font-size: 16px;
+  color: #5c5b5b;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
 
 /* footer */
 .categories li {
@@ -131,4 +151,15 @@ a {
   color: #0e856f; 
   text-decoration: underline;
   cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Animación de desplazamiento hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Animación de desplazamiento hacia arriba */
+  }
 }
