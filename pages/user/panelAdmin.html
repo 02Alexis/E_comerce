@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="/css/panelAdmin.css">
     <title>Panel Administrador</title>
@@ -15,29 +17,41 @@
         <section class="main__banner">
             <h1>Agrega un Nuevo Producto</h1>
         </section>
-        <form class="main__form" action="">
+        <form class="main__form" action="" id="form">
             <div>
                 <label for="imgProduct">Imagen: </label>
-                <input type="text" id="imgProduct" placeholder="Ingrese su Nombre de Usuario">
+                <input type="url" id="imgProduct" placeholder="Ingrese su Nombre de Usuario">
             </div>
             <div>
                 <label for="nameProduct">Nombre: </label>
-                <input type="password" id="nameProduct" placeholder="Ingrese su Contraseña">
+                <input type="text" id="nameProduct" placeholder="Ingrese su Contraseña">
             </div>
             <div>
                 <label for="grams">Gramos: </label>
-                <input type="password" id="grams" placeholder="Ingrese su Contraseña">
+                <input type="number" id="grams" placeholder="Ingrese su Contraseña">
             </div>
             <div>
                 <label for="price">Precio: </label>
-                <input type="password" id="price" placeholder="Ingrese su Contraseña">
+                <input type="number" id="price" placeholder="Ingrese su Contraseña">
             </div>
             <div>
                 <label for="category">Categoria: </label>
-                <input type="password" id="category" placeholder="Ingrese su Contraseña">
+                <select class="form__select" id="category">
+                    <option value="">Seleccione una Categoria</option>
+                    <option value="vegetable">vegetables & Fruit</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="milk">Meats & Seafoods</option>
+                    <option value="breakfast">Breakfast & Dairy</option>
+                    <option value="frozen">Frozen Foods</option>
+                    <option value="snack">Biscuits & Snacks</option>
+                    <option value="petFoods">Pet Food</option>
+                    <option value="wines">Wines & Alcohol Drinks</option>
+                </select>
             </div>
             <button type="submit">Agregar Producto</button>
         </form>
     </main>
+
+    <script src="/js/form.js" type="text/javascript"></script>
 </body>
 </html>

@@ -112,3 +112,23 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+/* footer */
+.categories li {
+  color: #808080;
+  margin-bottom: 5px;
+}
+.categories li a{
+  color: #808080;
+  margin-bottom: 5px;
+}
+
+.categories li a:hover {
+  color: #0e856f; 
+  text-decoration: underline; 
+}
+.categories li:hover {
+  color: #0e856f; 
+  text-decoration: underline;
+  cursor: pointer;
+}

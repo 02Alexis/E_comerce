@@ -113,6 +113,14 @@ a {
   justify-content: space-between;
 }
 
+/* cards products */
+.card-animatiom{
+  opacity: 0; /* Establecer la opacidad inicial en 0 */
+  animation-name: fadeIn; /* Nombre de la animación */
+  animation-duration: 0.5s; /* Duración de la animación en segundos */
+  animation-timing-function: ease-in; /* Función de temporización de la animación */
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
 .card-container {
   width: 100%;
   max-width: 300px;
@@ -215,4 +223,35 @@ a {
   background-color: #fff;
   padding: 5px 5px;
   border-radius: 50px;
+}
+
+/* footer */
+.categories li {
+  color: #808080;
+  margin-bottom: 5px;
+}
+.categories li a{
+  color: #808080;
+  margin-bottom: 5px;
+}
+
+.categories li a:hover {
+  color: #0e856f; 
+  text-decoration: underline; 
+}
+.categories li:hover {
+  color: #0e856f; 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Animación de desplazamiento hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Animación de desplazamiento hacia arriba */
+  }
 }

@@ -118,34 +118,237 @@
     <!-- /NAVIGATION -->
   </header>
   <!-- /HEADER -->
-    <main class="main">
-        <div class="container">
-            <div class="main__nav">
-                <div class="main__link">
-                    <h4>Cart</h4>
-                </div>
-                <div class="main__map">
-                    <p><a href="../index.html"><img src="../assets/home.svg" alt=""></a><img src="../assets/arrow_right.svg" alt=""></span><a href="">Cart</a></p>
-                </div>
-            </div>
+  <main class="main">
+    <div class="container">
+      <div class="main__nav">
+        <div class="main__link">
+          <h4>Cart</h4>
         </div>
+        <div class="main__map">
+          <p><a href="../index.html"><img src="../assets/home.svg" alt=""></a><img src="../assets/arrow_right.svg" alt=""></span><a href="">Cart</a></p>
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
         <!-- Elementos generados a partir del JSON -->
         <main id="items" class="col-sm-8 row"></main>
         <!-- Carrito -->
         <aside class="col-sm-4">
-            <h2>Carrito</h2>
-            <!-- Elementos del carrito -->
-            <ul id="carrito" class="list-group"></ul>
-            <hr>
-            <!-- Precio total -->
-            <p class="text-right">Total: <span id="total"></span>&euro;</p>
-            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+          <h2>Carrito</h2>
+          <!-- Elementos del carrito -->
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right">Total: <span id="total"></span>&euro;</p>
+          <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
         </aside>
+      </div>
     </div>
-</div>
+
+    <div class="container">
+      <div class="row productShoopingCart">
+        <div class="dropdown-item">
+          <div class="card mb-0" style="max-width: 400px;">
+            <div class="row g-0 pt-2">
+              <div class="d-flex justify-content-end mb-0 pe-2" ><i class="fa-solid fa-xmark"  data-delete="delete-of-cart" style="color: #000000;"></i></div>
+                <div class="col-md-4">
+                  <img src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/1.png" class="img-fluid rounded-start" alt="a">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body py-0">
+                    <h5 class="card-title text-truncate text-success">Fantasy Crunchy Choco Chip Cookies</h5>
+                    <p class="card-text"><small class="text-muted"> x $14.25</small></p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" style="background-color: #cac6c6; border-radius: 5px;">
+      <div class="row header">
+        <p>Cart Total</p>
+      </div>
+
+      <form id="form-discount">
+        <label style="color: #5c5b5b;" for="">Coupon Apply</label>
+        <div class="input-group mb-3">
+          <input style="border: #0ea487 solid;" type="text" name="discount" class="form-control" placeholder="Enter Coupon Code Here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" style="background-color: #0ea487; color: #fff; border: none;" type="submit">Apply</button>
+        </div>
+      </form>
+
+      <div class="container-discount">
+        <div class="row justify-content-between">
+          <div class="col d-flex justify-content-between">
+            <p style="color: #5c5b5b;">Coupon Discount</p>
+            <p>(-) 0.00</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-shipping">
+        <div class="row justify-content-between">
+          <div class="col d-flex justify-content-between">
+            <p style="color: #5c5b5b;">Shipping</p>
+            <p>$</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="container-total">
+        <div class="row justify-content-between">
+          <div class="col d-flex justify-content-between">
+            <p>TOTAL (USD)</p>
+            <p style="color: #0ea487;">$</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin: 10px; margin-bottom: 20px;">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Proces to Chekout
+        </button>
+      </div>
+
+      <div class="row" style="margin: 10px;">
+        <a type="button" href="/index.html" style=" background-color: #a5a1a1; border: none;" class="btn btn-light"><i class="bi bi-arrow-left" style="color: #000;"></i> <span> Return to shipping</span></a>
+      </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="form-checkout">
+              <div class="form-floating mb-3" >
+                <input type="text" name="Nombre" class="form-control" id="floatingInput" placeholder="Name">
+                <label for="floatingInput">Nombre</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" name="dirección" class="form-control" id="floatingInput" placeholder="Direccion">
+                <label for="">Dirección</label>
+              </div>
+              <div class="form-floating">
+                <input type="" name="Teléfono" class="form-control" id="floatingPassword" placeholder="Telefono">
+                <label for="floatingPassword">Telefono</label>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn" style="background-color: #cac6c6; color: #5c5b5b;" data-bs-dismiss="modal">Cancel</button>
+                <button type="cubmit" class="btn btn-danger">Buy Now</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+   <!-- FOOTER -->
+   <footer class="footer bg-secondary bg-light">
+    <div class="container mt-5">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img src="/img/logo.png" alt="logo" width="130" height="auto">
+            <p style="color: #808080;" class="text-justify py-3">We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a perfect place for a couple.</p>
+            <ul class="list-unstyled mb-0">
+              <li style="color: #808080;" class="nav-item"><i class="bi bi-house mb-3"></i>1418 Riverwood Drive, CA 96052, US</li>
+              <li style="color: #808080;" class="nav-item"><i class="bi bi-envelope mb-3"></i> support@fastkart.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="mb-3">Categories</h5>
+            <ul class="row list-unstyled mb-0 categories">
+              <li><a href="#">Vegetables & Fruit</a></li>
+              <li><a href="#">Beverages</a></li>
+              <li><a href="#">Meats & Seafood</a></li>
+              <li><a href="#">Frozen Foods</a></li>
+              <li><a href="#">Biscuits & Snacks</a></li>
+              <li><a href="#">Grocery & Staples</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="mb-3">Useful Links</h5>
+            <ul class="row list-unstyled mb-0 categories">
+              <li class="mb-1">Home</li>
+              <li>Tienda </li>
+              <li>About Us </li>
+              <li>Blog</li>
+              <li>Contacto</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="mb-3">Help Center</h5>
+            <ul class="row list-unstyled mb-0 categories">
+              <li>Your Order</li>
+              <li>Your Account</li>
+              <li>Track Order</li>
+              <li>Your Wishlist</li>
+              <li>Search</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="mb-3">Contact Us</h5>
+            <ul class="row list-unstyled mb-0">
+              <li style="color: #808080;"><i class="bi bi-telephone mb-3"></i> Hotline 24/7: </li>
+              <li class="fw-bold">+91 888 104 2340</li>
+              <hr class="bg.dark w-60">
+              <li style="color: #808080;"><i class="bi bi-envelope mb-3"></i> Email Addres:</li>
+              <li class="fw-bold"> fastkart@hotmail.com </li>
+              <hr class="bg.dark w-60">
+              <li style="color: #808080;">Download App:</li>
+              <div class="col d-flex align-items-center">
+                <img src="/img/footer/googleplay.png" alt="" width="130" height="auto" class="me-1">
+                <img src="/img/footer/applestore.png" alt="" width="130" height="auto" class="me-1">
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="bg.dark w-80" style="border: 1px solid #000;">
+      
+        <div class="row">
+          <div class="col-md-4 mt-4">
+            <div class="reserve">
+              <p style="color: #808080;" class="text-content">©2023 Fastkart All rights reserved</p>
+            </div>
+          </div>    <!-- Columna 2 para la imagen de Payment -->
+          <div class="col-md-4">
+            <div class="sub-footer section-small-space">
+              <img src="/img/footer/tarjetas-credito.png" alt="cards" width="200" height="auto">
+            </div>
+          </div>    <!-- Columna 3 para los enlaces de Social Media -->
+          <div class="col-md-4 mt-3">
+            <div class="d-flex align-items-center">
+              <h6 style="color: #808080;" class="text-content me-3">Stay connected:</h6>
+              <img src="/img/footer/facebook.png" alt="fracebook" width="30" height="auto" class="me-2">
+              <img src="/img/footer/twitter.png" alt="twiter"width="30" height="auto" class="me-2">
+              <img src="/img/footer/instagram.png" alt="instagram" " width="30" height="auto" class="me-2">
+              <img src="/img/footer/pinterest.png" alt="pinteres" width="30" height="auto" class="me-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

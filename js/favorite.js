@@ -31,7 +31,7 @@ const showProductFavorite = (container, productsList) => {
 
    productsList.forEach((Product) => {
       container.innerHTML += `
-      <div>
+      <div class="card-animatiom">
          <div class="card-image-container">
             <img class="card-image" src=${Product.imgProduct} alt=${Product.nameProduct}>
          <button><img class="delete-btn" data-card='delete' name=${Product.id} src="../assets/delete.svg"></button>
