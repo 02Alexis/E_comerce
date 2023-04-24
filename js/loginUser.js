@@ -43,7 +43,8 @@ const submitLogin = async (form) => {
     } else {
         const user = await getUser(
             userLogin.data.userName,
-            userLogin.data.paswoord
+            userLogin.data.paswoord,
+            userLogin.data.Administrador
         );
         if (user.length) {
             swal.fire(

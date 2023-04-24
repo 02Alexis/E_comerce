@@ -346,3 +346,17 @@ a {
     transform: translateY(0); /* Animación de desplazamiento hacia arriba */
   }
 }
+
+@media screen and (max-width: 580px) {
+  .navbar{
+    justify-content: center !important;
+  }
+  .imag-principal{
+    width: 100% ;
+  }
+  .imagen-second{
+    width: 100% ;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}

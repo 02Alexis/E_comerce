@@ -57,7 +57,7 @@ const showProductCategory = (container, productsList) => {
          </div>
             <div class="card__buttons">
                <button class="cards__button cards__button--see">
-                  <span data-card='cards' name=${Product.nameProduct} class="material-symbols-outlined">
+                  <span data-card='cards' name=${Product.id} src=${Product.imgProduct} class="material-symbols-outlined">
                   visibility
                   </span>
                </button>
@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 //add click event to send to details view
 document.addEventListener("click", (event) => {
    const dataCardAttribute = event.target.getAttribute("data-card");
+   const id = Number(event.target.getAttribute("name"));
    if (dataCardAttribute === "cards") {
       const id = event.target.getAttribute("name");
       sessionStorage.setItem("idProduct", JSON.stringify(id));
