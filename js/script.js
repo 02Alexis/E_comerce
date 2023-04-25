@@ -17,7 +17,7 @@ const getInfoProduct = async() => {//get the products from the api
    }
 }
 
-const getProduct = async(endpoint) => {//save the product in favorite
+const getProduct = async(endpoint) => {//get favorite products
    try {
       const result = await axios.get(`http://localhost:3000/${endpoint}`)
       console.log(result);
@@ -75,8 +75,8 @@ const showProductCategory = (container, productsList) => {
             <div class="card-content">
                <p class="card-description">${Product.nameProduct}</p>
                <div class="card-prices">
-                  <span class="card-price-original">${Product.price}</span>
-                  <span class="card-price-discount">${Product.price} </span>
+                  <span class="card-price-original">$${Product.price}</span>
+                  <span class="card-price-discount">$${Product.price} </span>
                </div>
                <div class="rating">
                   <span class="star">&#9733;</span>
@@ -86,8 +86,8 @@ const showProductCategory = (container, productsList) => {
                   <span class="star">&#9733;</span>
                   <span class="card-price-original">In Stock</span>
                </div>
-               <button class="card-button" data-btn='bShoppingCart' data-id=${Product.id}>
-                  <span class="btn-text">Add</span>
+               <button class="card-button">
+                  <span class="btn-text" data-btn='bShoppingCart' data-id=${Product.id}>Add</span>
                   <span class="btn-icon"><i class="fas fa-plus"></i></span>
                </button>
             </div>

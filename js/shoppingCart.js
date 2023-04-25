@@ -33,8 +33,8 @@ const showProductCart = (container, productsList) => {
         </div>
         <div class="col">
           <div class="row"><p>Price</p></div>
-          <div class="row"><p class="card-price-original">${Product.price} <span class="card-price-discount"> ${Product.price}</span></p></div>
-          <div class="row"><p style="color: #0e856f;">You Save: ${Product.price} </p></div>
+          <div class="row"><p class="card-price-original">$${Product.price} <span class="card-price-discount"> ${Product.price}</span></p></div>
+          <div class="row"><p style="color: #0e856f;">You Save: $${Product.price} </p></div>
         </div>
         <div class="col">
           <div class="row"><p>Qty</p></div>

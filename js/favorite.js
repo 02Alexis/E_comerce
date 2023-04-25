@@ -41,8 +41,8 @@ const showProductFavorite = (container, productsList) => {
             <p class="card-description"">${Product.nameProduct}</p>
             <p class="card-name"">${Product.grams}</p>
             <div class="card-prices">
-               <span class="card-price-original">${Product.price}</span>
-               <span class="card-price-discount">${Product.price} </span>
+               <span class="card-price-original">$${Product.price}</span>
+               <span class="card-price-discount">$${Product.price} </span>
             </div>
             <button class="card-button" data-btn='bShoppingCart' data-id=${Product.id}>Add <i class="fas fa-plus"></i></button>
          </div>

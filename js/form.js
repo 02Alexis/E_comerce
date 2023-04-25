@@ -12,7 +12,7 @@ console.log(formData);
       // Enviar datos a la API usando Axios
       const response = await axios.post('http://localhost:3000/Products', productData);
       console.log(response.data);
-      swal('¡Producto agregado!', 'Producto creado Exitosamente', 'success');
+      alert('Producto creado exitosamente!');
       form.reset();
     } catch (error) {
       console.error(error);
